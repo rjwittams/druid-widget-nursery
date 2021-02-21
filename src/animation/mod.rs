@@ -114,6 +114,12 @@ impl From<AnimationEventName> for AnimationEvent {
     }
 }
 
+impl From<AnimationId> for AnimationEvent {
+    fn from(id: AnimationId) -> Self {
+        AnimationEvent::Ended(id)
+    }
+}
+
 pub(in crate::animation) fn clamp_fraction(f: f64) -> f64 {
     // f.clamp is unstable
     f.max(0.).min(1.)

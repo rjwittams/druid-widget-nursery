@@ -30,6 +30,7 @@ mod tree;
 #[cfg(feature = "async")]
 mod future_widget;
 
+mod ensured_pool;
 #[cfg(feature = "hot-reload")]
 pub mod hot_reload;
 
@@ -37,6 +38,7 @@ pub use canvas::{Canvas, CanvasLayout, CanvasWrap};
 pub use dropdown::{Dropdown, DROP};
 pub use dropdown_select::DropdownSelect;
 pub use dynamic_sized_box::DynamicSizedBox;
+pub use ensured_pool::EnsuredPool;
 pub use list_select::ListSelect;
 pub use multi_value::{MultiCheckbox, MultiRadio};
 pub use seperator::{Orientation, Seperator};

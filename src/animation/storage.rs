@@ -1,9 +1,10 @@
+use druid::Data;
 use std::num::NonZeroU32;
 
 type ASOffset = u32;
 type ASVersion = NonZeroU32;
 
-#[derive(Debug, Copy, Clone, Eq, PartialEq, Hash)]
+#[derive(Data, Debug, Copy, Clone, Eq, PartialEq, Hash)]
 pub struct AnimationId {
     offset: ASOffset,
     version: ASVersion,
